@@ -1,9 +1,36 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  if(word.length <= 1){
+    return true
+  }
+  else{
+    backwardsWord = []
+    for(let i=0; i<word.length; i++){
+      backwardsWord.unshift(word[i])
+    }
+    if(word === backwardsWord.join("")){
+      return true
+    }
+    else{
+      return false
+    }
+  }
 }
+
+
 
 /* 
   Add your pseudocode here
+  reverse each word
+    create a new string
+    use pop to add each element to new array
+  compare to the given word
+  if they are equal then submit true, else false
+
+  cases:
+  empty string
+  one letter
+
 */
 
 /*
